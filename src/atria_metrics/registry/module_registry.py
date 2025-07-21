@@ -10,5 +10,8 @@ def init_registry():
         return
     _initialized = True
     ModuleRegistry().add_registry_group(
-        name="METRIC", registry_group=RegistryGroup(name="metric", is_factory=True)
+        name="METRIC",
+        registry_group=RegistryGroup(
+            name="metric", is_factory=True, default_provider="atria_metrics"
+        ),
     )
