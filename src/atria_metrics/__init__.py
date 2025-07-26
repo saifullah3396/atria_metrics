@@ -12,6 +12,6 @@ Author: Saifullah
 Date: April 14, 2025
 """
 
-from atria_metrics.registry import METRIC
+from atria_metrics.registry import METRIC, MetricBuilder
 
-__all__ = ["METRIC"]
+__all__ = ["METRIC", "MetricBuilder"]

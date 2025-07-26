@@ -7,4 +7,4 @@ is_multilabel: false
 device: cpu
 skip_unrolling: false
 module: ignite.metrics.precision.Precision
-_target_: atria_registry.module_builder.ModuleBuilder
+_target_: atria_metrics.registry.registry_groups.MetricBuilder

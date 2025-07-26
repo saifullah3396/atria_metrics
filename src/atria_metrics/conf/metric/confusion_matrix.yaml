@@ -1,5 +1,4 @@
 _partial_: false
-num_classes: ???
 average: recall
 output_transform:
   path: atria_metrics.instance_classification.output_transforms._output_transform
@@ -7,4 +6,4 @@ output_transform:
 device: cpu
 skip_unrolling: true
 module: ignite.metrics.confusion_matrix.ConfusionMatrix
-_target_: atria_registry.module_builder.ModuleBuilder
+_target_: atria_metrics.registry.registry_groups.MetricBuilder

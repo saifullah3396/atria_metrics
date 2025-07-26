@@ -4,4 +4,4 @@ output_transform:
   _target_: hydra_zen.funcs.get_obj
 device: cpu
 module: atria_metrics.layout.f1_score.f1_score
-_target_: atria_registry.module_builder.ModuleBuilder
+_target_: atria_metrics.registry.registry_groups.MetricBuilder

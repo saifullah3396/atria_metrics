@@ -1,8 +1,7 @@
 _partial_: false
-device: ???
 output_transform:
   path: atria_metrics.qa.output_transforms._sequence_anls_output_transform
   _target_: hydra_zen.funcs.get_obj
 threshold: 0.5
 module: atria_metrics.qa.sequence_anls.sequence_anls
-_target_: atria_registry.module_builder.ModuleBuilder
+_target_: atria_metrics.registry.registry_groups.MetricBuilder

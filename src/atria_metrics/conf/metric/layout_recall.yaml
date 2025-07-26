@@ -6,4 +6,4 @@ average: false
 is_multilabel: false
 device: cpu
 module: atria_metrics.layout.recall.LayoutRecall
-_target_: atria_registry.module_builder.ModuleBuilder
+_target_: atria_metrics.registry.registry_groups.MetricBuilder

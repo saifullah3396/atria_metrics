@@ -34,11 +34,11 @@ License: MIT
 from atria_registry.module_registry import ModuleRegistry
 
 from atria_metrics.registry.module_registry import init_registry
-from atria_metrics.registry.registry_groups import MetricRegistryGroup
+from atria_metrics.registry.registry_groups import MetricBuilder, MetricRegistryGroup
 
 init_registry()
 
 METRIC: MetricRegistryGroup = ModuleRegistry().METRIC
 
 
-__all__ = ["METRIC"]
+__all__ = ["METRIC", "MetricBuilder"]
