@@ -9,4 +9,4 @@ class MetricBuilder(ModuleBuilder):
 class MetricRegistryGroup(RegistryGroup):
     __registers_as_module_builder__ = True
     __module_builder_class__ = MetricBuilder
-    __exclude_from_builder__ = {"num_classes"}
+    __exclude_from_builder__ = {"num_classes", "device"}

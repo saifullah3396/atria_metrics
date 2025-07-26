@@ -1,5 +1,4 @@
 _partial_: false
-device: ???
 output_transform:
   path: atria_metrics.qa.output_transforms._sequence_anls_output_transform
   _target_: hydra_zen.funcs.get_obj
