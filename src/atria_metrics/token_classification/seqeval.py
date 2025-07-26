@@ -15,10 +15,10 @@ def seqeval_classification_metric(
 ):
     from functools import partial
 
-    from atria_metrics.training.metrics.common.epoch_dict_metric import EpochDictMetric
+    from atria_metrics.common.epoch_dict_metric import EpochDictMetric
 
-    returatria_metrics
-        compute_fn=partial(_resolve_module_from_path(metric_func, **kwargs)),
+    return EpochDictMetric(
+        compute_fn=partial(_resolve_module_from_path(metric_func), **kwargs),
         output_transform=output_transform,
         device=device,
     )
@@ -40,12 +40,10 @@ for metric in [
     ]:
         kwargs["scheme"] = "IOB2"
 
-    METRIC.register_modules(
-        module_paths=[
-            _get_parent_module(__name__) + ".seqeval.seqeval_classification_metric"
-        ],
-        module_names=[f"seqeval_{metric}"],
-        output_transform=_output_transform,
+    METRIC.register(
+        f"seqeval_{metric}",
         metric_func=f"seqeval.metrics.{metric}",
+        output_transform=_output_transform,
         device="cpu",
-    )
+        **kwargs,
+    )(_get_parent_module(__name__) + ".seqeval.seqeval_classification_metric")

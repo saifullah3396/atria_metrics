@@ -1,0 +1,9 @@
+_partial_: false
+metric_func: seqeval.metrics.precision_score
+output_transform:
+  path: atria_metrics.token_classification.output_transforms._output_transform
+  _target_: hydra_zen.funcs.get_obj
+device: cpu
+scheme: IOB2
+module: atria_metrics.token_classification.seqeval.seqeval_classification_metric
+_target_: atria_metrics.registry.registry_groups.MetricBuilder

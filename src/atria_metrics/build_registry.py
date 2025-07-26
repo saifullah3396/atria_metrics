@@ -29,6 +29,7 @@ from atria_metrics.layout.precision import *  # noqa
 from atria_metrics.layout.recall import *  # noqa
 from atria_metrics.qa.anls import *  # noqa
 from atria_metrics.qa.sequence_anls import *  # noqa
+from atria_metrics.token_classification.seqeval import *  # noqa
 
 if __name__ == "__main__":
     write_registry_to_yaml(str(Path(__file__).parent / "conf"), types=["metric"])
