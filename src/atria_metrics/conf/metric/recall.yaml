@@ -1,8 +1,10 @@
-_target_: ignite.metrics.accuracy.Accuracy
-_partial_: true
+_partial_: false
 output_transform:
   path: atria_metrics.instance_classification.output_transforms._output_transform
   _target_: hydra_zen.funcs.get_obj
+average: true
 is_multilabel: false
 device: cpu
 skip_unrolling: false
+module: ignite.metrics.recall.Recall
+_target_: atria_registry.module_builder.ModuleBuilder

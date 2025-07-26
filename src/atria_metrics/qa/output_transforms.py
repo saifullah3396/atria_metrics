@@ -1,5 +1,11 @@
-import torch
-from atria_models.data_types.outputs import QAModelOutput, SequenceQAModelOutput
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
+from atria_core.types import QAModelOutput, SequenceQAModelOutput
+
+if TYPE_CHECKING:
+    import torch
 
 
 def _anls_output_transform(output: QAModelOutput) -> tuple[list[str], list[str]]:

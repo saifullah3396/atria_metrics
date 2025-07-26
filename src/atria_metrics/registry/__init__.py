@@ -32,13 +32,13 @@ License: MIT
 """
 
 from atria_registry.module_registry import ModuleRegistry
-from atria_registry.registry_group import RegistryGroup
 
 from atria_metrics.registry.module_registry import init_registry
+from atria_metrics.registry.registry_groups import MetricRegistryGroup
 
 init_registry()
 
-METRIC: RegistryGroup = ModuleRegistry().METRIC
+METRIC: MetricRegistryGroup = ModuleRegistry().METRIC
 
 
 __all__ = ["METRIC"]

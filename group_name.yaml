@@ -1,0 +1,6 @@
+defaults:
+- _self_
+- /metric@metric=accuracy
+- /metric@metric=f1_score
+- /metric@metric=precision
+- /metric@metric=recall

@@ -22,6 +22,5 @@ if [[ -z "$PROJECT_ROOT" ]]; then
     exit 1
 fi
 
-export PYTHONPATH="$PROJECT_ROOT/src:$PYTHONPATH"
 
-python $SCRIPT_DIR/../src/atria_metrics/build_registry.py
+ATRIA_FILE_STORE_BUILD_ENABLED=True uv run python $SCRIPT_DIR/../src/atria_metrics/build_registry.py

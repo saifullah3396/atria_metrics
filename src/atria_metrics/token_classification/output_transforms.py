@@ -1,4 +1,4 @@
-from atria_models.data_types.outputs import TokenClassificationModelOutput
+from atria_core.types import TokenClassificationModelOutput
 
 
 def _output_transform(model_output: TokenClassificationModelOutput):

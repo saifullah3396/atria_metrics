@@ -1,4 +1,4 @@
-from atria_models.data_types.outputs import ClassificationModelOutput
+from atria_core.types import ClassificationModelOutput
 
 
 def _output_transform(output: ClassificationModelOutput):

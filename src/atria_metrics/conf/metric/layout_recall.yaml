@@ -1,8 +1,9 @@
-_target_: atria_metrics.layout.precision.LayoutPrecision
-_partial_: true
+_partial_: false
 output_transform:
   path: atria_metrics.layout.output_transforms._output_transform
   _target_: hydra_zen.funcs.get_obj
 average: false
 is_multilabel: false
 device: cpu
+module: atria_metrics.layout.recall.LayoutRecall
+_target_: atria_registry.module_builder.ModuleBuilder
